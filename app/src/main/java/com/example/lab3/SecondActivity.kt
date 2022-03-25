@@ -27,19 +27,11 @@ class SecondActivity : AppCompatActivity() {
 
     private fun onThird() {
         val intent = Intent(this, ThirdActivity::class.java)
-        startActivityForResult(intent, 0)
+        startActivity(intent)
     }
 
     private fun onAbout() {
         val intent = Intent(this, AboutActivity::class.java)
         startActivity(intent)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode == 1) {
-            finish()
-        }
     }
 }

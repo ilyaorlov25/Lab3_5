@@ -13,8 +13,9 @@ class ThirdActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bnToFirst.setOnClickListener {
-            setResult(1)
-            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
         }
 
         binding.bnToSecond.setOnClickListener {
