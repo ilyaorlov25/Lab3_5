@@ -16,6 +16,12 @@ class SecondActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.bnToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+        }
+
         binding.bnToThird.setOnClickListener {
             onThird()
         }
