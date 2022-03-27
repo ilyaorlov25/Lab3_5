@@ -1,8 +1,9 @@
 package com.example.lab3
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.lab3.databinding.FirstActivityBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,22 +13,13 @@ class MainActivity : AppCompatActivity() {
         val binding = FirstActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bnToSecond.setOnClickListener{
-            onSecond()
-        }
+        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+                as NavHostFragment).navController
+
+        binding.navView.setupWithNavController(navController)
 
         binding.bnToAbout.setOnClickListener {
-            onAbout()
+            navController.navigate(R.id.action_global_aboutActivity)
         }
-    }
-
-    private fun onSecond() {
-        val intent = Intent(this, SecondActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun onAbout() {
-        val intent = Intent(this, AboutActivity::class.java)
-        startActivity(intent)
     }
 }
