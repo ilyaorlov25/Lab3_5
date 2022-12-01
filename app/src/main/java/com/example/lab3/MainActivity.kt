@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
                 as NavHostFragment).navController
 
-        binding.navView.setupWithNavController(navController)
+        binding.drawerNavView.setupWithNavController(navController)
 
         binding.bnToAbout.setOnClickListener {
             navController.navigate(R.id.action_global_aboutActivity)
