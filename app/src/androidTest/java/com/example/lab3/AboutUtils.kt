@@ -25,8 +25,7 @@ private fun openAboutViaDrawer() {
         .perform(DrawerActions.open()); // Open Drawer
 
     // Start the screen of your activity.
-    onView(withId(R.id.drawer_nav_view))
-        .perform(NavigationViewActions.navigateTo(R.id.activity_about))
+    onView(withId(R.id.bnToAbout)).perform(click())
 }
 
 //private fun openAboutViaOptions() {

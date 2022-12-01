@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.lab3
 
 import androidx.test.core.app.launchActivity
 import androidx.test.ext.junit.runners.AndroidJUnit4

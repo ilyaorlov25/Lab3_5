@@ -31,13 +31,11 @@ class RotateTest {
         }
         isDisplaying(idFragment3)
 
-        /*
         openAbout()
         isDisplaying(idActivityAbout)
         activityScenario.onActivity { activity ->
             activity.recreate()
         }
         isDisplaying(idActivityAbout)
-         */
     }
 }
